@@ -11,6 +11,7 @@ function rollupConfig(opts) {
   opts.meta = Object.assign({
     name: '',
     version: '0.0.0',
+    dependencies: [],
     author: {
       name: ''
     }
@@ -18,8 +19,8 @@ function rollupConfig(opts) {
 
   // Make banner
   const banner = opts.banner || `/*!
-  * ${meta.name} v${meta.version}
-  * Copyright (c) ${new Date().getFullYear()} ${meta.author.name}
+  * ${opts.meta.name} v${opts.meta.version}
+  * Copyright (c) ${new Date().getFullYear()} ${opts.meta.author.name}
   *
   * Released under the MIT License.
   */`
@@ -27,15 +28,15 @@ function rollupConfig(opts) {
   const config = {
     entry: opts.entry,
     dest: opts.dest,
-    external: ['fs', 'path', 'http', 'module'].concat(_package.dependencies, opts.external),
+    external: ['fs', 'path', 'http', 'module'].concat(opts.meta.dependencies, opts.external),
     format: opts.format || 'cjs',
     banner: banner,
-    moduleName: opts.moduleName || meta.name || '',
+    moduleName: opts.moduleName || opts.meta.name || '',
     sourceMap: opts.meta === false ? false : true,
     plugins: [
       rollupAlias(Object.assign({ resolve: ['.js', '.json', '.jsx', '.ts'] }, opts.alias)),
       rollupNodeResolve(Object.assign({ main: true, jsnext: true }, opts.nodeResolve)),
-      rollupCommonJS(Object.assign({}, open.commonjs)),
+      rollupCommonJS(Object.assign({}, opts.commonjs)),
       rollupBabel(Object.assign({
         exclude: 'node_modules/**',
         plugins: [
