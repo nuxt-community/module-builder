@@ -14,6 +14,10 @@
 - Nuxt inspired build system using optional single `nuxt.module.config.js` file
 - Standard eslint rules
 
+### Using module starter template
+Just head to [nuxt-community/module-template](https://github.com/nuxt-community/module-template)
+to make your fresh module in few minutes.
+
 ## Getting started
 
 Edit **package.json** like this:
@@ -52,10 +56,7 @@ module.exports = {
 
 You you can now use `npm run nuxt-module` to generate `dist/index.js`
 
-### Using module starter template
-TODO
-
-## Eslint
+## ESLint
 TODO
 
 ## License
