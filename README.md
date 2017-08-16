@@ -41,7 +41,8 @@ export default async function (moduleOptions) {
 }
 ```
 
-Optionally create a **nuxt.module.config.js** in the root of module project to specify more options:
+Optionally add a `moduleBuilder` section in **package.json** 
+or Create **nuxt.module.config.js** in the root of module project to customize module builder:
 
 ```js
 module.exports = {
