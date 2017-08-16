@@ -28,6 +28,7 @@
     "rollup-plugin-commonjs": "^8.1.0",
     "rollup-plugin-copy": "^0.2.3",
     "rollup-plugin-filesize": "^1.4.2",
+    "rollup-plugin-node-builtins": "^2.1.2",
     "rollup-plugin-node-resolve": "^3.0.0",
     "rollup-plugin-uglify-es": "^0.0.1",
     "standard-version": "^4.2.0"
