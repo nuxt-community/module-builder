@@ -57,6 +57,9 @@ module.exports = {
 
 You you can now use `npm run nuxt-module` to generate `dist/index.js`
 
+
+For watch mode you can use `nuxt-module --watch`
+
 ## ESLint
 TODO
 
