@@ -11,9 +11,10 @@ const debug = require('debug')('nuxt-module:')
 const argv = parseArgs(process.argv.slice(2), {
     alias: {
         h: 'help',
-        c: 'config-file'
+        c: 'config-file',
+        w: 'watch'
     },
-    boolean: ['h'],
+    boolean: ['h', 'w'],
     string: ['c'],
     default: {
         c: 'nuxt.module.config.js'
@@ -52,4 +53,10 @@ if (typeof options.rootDir !== 'string') {
 // Build module
 debug('Starting build')
 const builder = new ModuleBuilder(options)
-builder.build().catch(console.error)
+
+if (argv.watch) {
+    builder.watch().catch(console.error)
+} else {
+    builder.build().catch(console.error)
+}
+
