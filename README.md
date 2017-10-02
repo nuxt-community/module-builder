@@ -42,7 +42,7 @@ export default async function (moduleOptions) {
 ```
 
 Optionally add a `moduleBuilder` section in **package.json** 
-or Create **nuxt.module.config.js** in the root of module project to customize module builder:
+or create **nuxt.module.config.js** in the root of module project to customize module builder:
 
 ```js
 module.exports = {
@@ -55,10 +55,10 @@ module.exports = {
 }
 ```
 
-You you can now use `npm run nuxt-module` to generate `dist/index.js`
+You can now use `npm run nuxt-module` to generate `dist/index.js`
 
 
-For watch mode you can use `nuxt-module --watch`
+For watch mode, you can use `nuxt-module --watch`
 
 ## ESLint
 TODO
