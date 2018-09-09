@@ -6,7 +6,7 @@
 
 > 🏗️ Nuxt Standard Module Builder
 
-### ⚠️ This package is still under development
+### ⚠️ This package is no longer maintained as Nuxt 2+ modules natively support ESM! Please use [module-template](https://github.com/nuxt-community/module-template)
 
 ## Features
 - Build modules using same tool-chain of nuxt
